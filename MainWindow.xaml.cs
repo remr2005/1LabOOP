@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using _1LabOOP;
 
 namespace _1LabOOP
 {
@@ -29,7 +30,7 @@ namespace _1LabOOP
         {
             // если пользователь вводит что угодно кроме "0123456789-," или
             // пользователь вводит - и при этом строка не пустая или
-            // пользователь вводит запятую когда строка пустая или когда уже содержит ","
+            // пользователь вводит запятую когда строка пустая или когда уже содержит ,
             // отменить ввод
             if (!"0123456789-,".Contains(e.Text) || (e.Text == "-" && TxtBox.Text.Length != 0) || (e.Text == "," && (TxtBox.Text.Length == 0 || TxtBox.Text.Contains(","))))
             {
@@ -45,6 +46,13 @@ namespace _1LabOOP
                 // Если пробел, то запрещаем ввод
                 e.Handled = true;
             }
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Здесь можно добавить логику, которая выполнится при нажатии кнопки
+            _1LabOOP.SecondTask secondWindow = new _1LabOOP.SecondTask();
+            secondWindow.Show();
+
         }
     }
 }

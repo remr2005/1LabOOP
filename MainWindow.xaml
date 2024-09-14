@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="1task" Height="450" Width="800">
     <Grid>
-        <TextBox Name="TxtBox" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown"  FontSize="20" HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="720" Height="320" TextAlignment="Center" RenderTransformOrigin="0.5,0.561"/>
-
+        <TextBox Name="TxtBox" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown"  FontSize="20" HorizontalAlignment="Center" Margin="0,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="720" Height="320" TextAlignment="Center" RenderTransformOrigin="0.5,0.561"/>
+        <Button Content="Следующее задание&#xD;&#xA;" HorizontalAlignment="Left" Margin="650,369,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click"/>
     </Grid>
 </Window>
