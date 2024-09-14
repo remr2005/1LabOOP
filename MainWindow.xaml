@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="1task" Height="450" Width="800">
     <Grid>
+        <TextBox Name="TxtBox" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown"  FontSize="20" HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="720" Height="320" TextAlignment="Center" RenderTransformOrigin="0.5,0.561"/>
 
     </Grid>
 </Window>
