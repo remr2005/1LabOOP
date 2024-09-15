@@ -37,6 +37,7 @@ namespace _1LabOOP
             _1LabOOP.MainWindow secondWindow = new _1LabOOP.MainWindow();
             secondWindow.Show();
         }
+        // Проверка на ввод только римских цифр
         private void TxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             // если пользователь вводит что угодно кроме "0123456789-" или
@@ -48,9 +49,21 @@ namespace _1LabOOP
             }
         }
         // Когда содержимое TextBox меняется
-        private void TxtBox_TextChanged(object sender, TextChangedEventArgs e)
+        // Перевод а арабские цифры
+        private void TxtBox_TextChanged_to_arabic(object sender, TextChangedEventArgs e)
         {
-            Label_Rome.Content = remove_rome(TxtBox.Text); 
+            Label_Rome.Content = remove_rome(TxtBox.Text);
+        }
+        private void TxtBox_PreviewTextInput_arabic(object sender, TextCompositionEventArgs e)
+        {
+            if (!"1234567890".Contains(e.Text) || (e.Text == "0" && TxtBox_arabic.Text.Length == 0) || Int32.Parse(TxtBox_arabic.Text + e.Text)>3999)
+            {
+                e.Handled = true;
+            }
+        }
+        private void TxtBox_TextChanged_to_rome(object sender, TextChangedEventArgs e)
+        {
+            Label_Arabic.Content = return_rome(TxtBox_arabic.Text);
         }
         // к сожалению PrewiewTextInput не обрабатывает не символьные клавиши, пробел в том числе, поэтому что бы пользователь не мог ввести пробел испоьзуется PrewiewKeyDown
         private void InputTextBox_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)

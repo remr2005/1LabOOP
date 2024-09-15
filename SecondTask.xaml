@@ -9,7 +9,16 @@
     <Grid>
         <Button Content="Следующее задание&#xA;" HorizontalAlignment="Left" Margin="650,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click1"/>
         <Button Content="Предыдущее задание" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click"/>
-        <TextBox Name="TxtBox" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="TxtBox_TextChanged" HorizontalAlignment="Left" Margin="65,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="30"/>
+        <TextBox Name="TxtBox" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="TxtBox_TextChanged_to_arabic" HorizontalAlignment="Left" Margin="65,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="30"/>
         <Label Name="Label_Rome" Content="" HorizontalAlignment="Left" Margin="65,104,0,0" VerticalAlignment="Top" Height="30" Width="180"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,23,0,0" TextWrapping="Wrap" Text="Римские цифры
+                   " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="75,83,0,0" TextWrapping="Wrap" Text="Арабские цифры
+                   " VerticalAlignment="Top"/>
+        <TextBox x:Name="TxtBox_arabic" PreviewTextInput="TxtBox_PreviewTextInput_arabic"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="TxtBox_TextChanged_to_rome" HorizontalAlignment="Center" Margin="0,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="30"/>
+        <Label x:Name="Label_Arabic" Content="" HorizontalAlignment="Center" Margin="0,104,0,0" VerticalAlignment="Top" Height="30" Width="180"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" Text="Арабские цифры                    " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,83,0,0" TextWrapping="Wrap" Text="Римские цифры
+                   " VerticalAlignment="Top"/>
     </Grid>
 </Window>
