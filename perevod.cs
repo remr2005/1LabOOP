@@ -101,5 +101,20 @@ namespace _1LabOOP
             }
             return res.ToString();
         }
+        // Мой корень
+        public static decimal my_sqrt(decimal a, decimal t)
+        {
+            if (a == 0) return 0;
+            // Приближение
+            int n = (int)Math.Floor(Math.Log2((double)a));
+            decimal a_ = a / (decimal)Math.Pow(2, 2 * n); // Вычисляем a
+            decimal guess = (0.5m + 0.5m * a_) * (decimal)Math.Pow(2, n);
+            // Основной цикл
+            while (Math.Abs(((a / guess) + guess) / 2 - guess) > t)
+            {
+                guess = ((a / guess) + guess) / 2;
+            }
+            return guess;
+        }
     }
 }

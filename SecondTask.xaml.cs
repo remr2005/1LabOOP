@@ -32,7 +32,7 @@ namespace _1LabOOP
         }
         private void Button_Click1(object sender, RoutedEventArgs e)
         {
-            _1LabOOP.MainWindow secondWindow = new _1LabOOP.MainWindow();
+            _1LabOOP.ThirdTask secondWindow = new _1LabOOP.ThirdTask();
             secondWindow.Show();
         }
         // Проверка на ввод только римских цифр

@@ -1,0 +1,19 @@
+﻿<Window x:Class="_1LabOOP.ThirdTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1LabOOP"
+        mc:Ignorable="d"
+        Title="SecondTask" Height="450" Width="800">
+    <Grid>
+        <Button Content="Следующее задание&#xA;" HorizontalAlignment="Left" Margin="650,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click1"/>
+        <Button Content="Предыдущее задание" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click"/>
+        <TextBlock TextWrapping="Wrap" Margin="43,31,529,383"><Run Language="ru-ru" Text="Число"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="435,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="146"><Run Language="ru-ru" Text="Точность"/></TextBlock>
+        <TextBox Name="NumberBox" PreviewTextInput="TxtBox_PreviewTextInput_Num"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="NumberBox_TextChanged" HorizontalAlignment="Left" Margin="43,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" Height="17"/>
+        <TextBox Name="T_box"  PreviewTextInput="TxtBox_PreviewTextInput_t"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="NumberBox_TextChanged" HorizontalAlignment="Left" Margin="435,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" Height="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="107"><Run Language="ru-ru" Text="ОТВЕТ"/></TextBlock>
+        <Label Name="Answer_Label"  Content="" HorizontalAlignment="Left" Margin="43,178,0,0" VerticalAlignment="Top" Height="26" Width="202"/>
+    </Grid>
+</Window>
