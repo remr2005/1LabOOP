@@ -19,13 +19,50 @@ namespace _1LabOOP
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /*
+    Неявные преобразования:
+
+    byte    -> short, ushort, int, uint, long, ulong, float, double, decimal 
+    sbyte   -> short, int, long, float, double, decimal 
+    short   -> int, long, float, double, decimal 
+    ushort  -> int, uint, long, ulong, float, double, decimal
+    int     -> long, float, double, decimal
+    uint    -> long, ulong, float, double, decimal
+    long    -> float, double, decimal
+    ulong   -> float, double, decimal
+    float   -> double
+    char    -> ushort, int, uint, long, ulong, float, double, decimal
+
+    Явные преобразования:
+
+    byte   -> short, ushort, int, uint, long, ulong, float, double, decimal 
+    sbyte  -> short, int, long, float, double, decimal 
+    short  -> int, long, float, double, decimal 
+    ushort -> int, uint, long, ulong, float, double, decimal
+    int    -> long, float, double, decimal
+    uint   -> long, ulong, float, double, decimal
+    long   -> float, double, decimal
+    ulong  -> float, double, decimal
+    float  -> double
+    char   -> ushort, int, uint, long, ulong, float, double, decimal
+    */
+
     public partial class MainWindow : Window
-    {   
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the PreviewTextInput event for the TxtBox control.
+        /// This method restricts user input to certain characters.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void TxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             // если пользователь вводит что угодно кроме "0123456789-," или
@@ -37,7 +74,13 @@ namespace _1LabOOP
                 e.Handled = true;
             }
         }
-        // к сожалению PrewiewTextInput не обрабатывает не символьные клавиши, пробел в том числе, поэтому что бы пользователь не мог ввести пробел испоьзуется PrewiewKeyDown
+
+        /// <summary>
+        /// Handles the PreviewKeyDown event for the InputTextBox control.
+        /// This method prevents the user from entering a space character.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void InputTextBox_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             // Проверяем, нажата ли клавиша пробела
@@ -47,12 +90,18 @@ namespace _1LabOOP
                 e.Handled = true;
             }
         }
+
+        /// <summary>
+        /// Handles the Click event for the button control.
+        /// This method opens the second task window.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Здесь можно добавить логику, которая выполнится при нажатии кнопки
             _1LabOOP.SecondTask secondWindow = new _1LabOOP.SecondTask();
             secondWindow.Show();
-
         }
     }
 }
