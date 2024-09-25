@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1LabOOP</name>
+    </assembly>
+    <members>
+        <member name="T:_1LabOOP.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:_1LabOOP.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:_1LabOOP.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.MainWindow.TxtBox_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the PreviewTextInput event for the TxtBox control.
+            This method restricts user input to certain characters.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.MainWindow.InputTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event for the InputTextBox control.
+            This method prevents the user from entering a space character.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.MainWindow.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event for the button control.
+            This method opens the second task window.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.perevod.remove_rome(System.String)">
+            <summary>
+            Переводит строку римских цифр в арабское число.
+            </summary>
+            <param name="s">Строка, содержащая римские цифры.</param>
+            <returns>Арабское число в виде строки.</returns>
+        </member>
+        <member name="M:_1LabOOP.perevod.return_rome(System.String)">
+            <summary>
+            Переводит арабское число в римские цифры.
+            </summary>
+            <param name="str">Строка, содержащая арабское число.</param>
+            <returns>Римское число в виде строки.</returns>
+        </member>
+        <member name="M:_1LabOOP.perevod.from_tenth_to(System.Int32,System.Int32)">
+            <summary>
+            Переводит десятичное число в систему счисления с основанием от 2 до 16.
+            </summary>
+            <param name="a">Десятичное число.</param>
+            <param name="b">Основание системы счисления.</param>
+            <returns>Число в виде строки в новой системе счисления.</returns>
+        </member>
+        <member name="M:_1LabOOP.perevod.my_sqrt(System.Decimal,System.Decimal)">
+            <summary>
+            Вычисляет квадратный корень с заданной точностью.
+            </summary>
+            <param name="a">Число, из которого нужно извлечь корень.</param>
+            <param name="t">Точность вычислений.</param>
+            <returns>Квадратный корень числа.</returns>
+        </member>
+        <member name="T:_1LabOOP.SecondTask">
+            <summary>
+            Логика взаимодействия для SecondTask.xaml
+            </summary>
+            <summary>
+            SecondTask
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:_1LabOOP.SecondTask"/> class.
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event for the button to open the main window.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.Button_Click1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event for the button to open the third task window.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the PreviewTextInput event for the TxtBox control.
+            This method restricts user input to Roman numerals only.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_TextChanged_to_arabic(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the TextChanged event for the TxtBox control.
+            This method converts Roman numerals to Arabic numerals.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_PreviewTextInput_arabic(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the PreviewTextInput event for the Arabic number input.
+            This method restricts user input to Arabic numerals only and ensures the value does not exceed the maximum.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_TextChanged_to_rome(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the TextChanged event for the Arabic number input.
+            This method converts Arabic numerals to Roman numerals.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.InputTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event to prevent the space character from being entered in any TextBox.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_Number(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the TextCompositionEventArgs for the Number input.
+            This method restricts user input to Arabic numerals only.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.TxtBox_Number_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the TextChanged event for the Number input.
+            This method converts the number to a different base.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.SecondTask.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:_1LabOOP.ThirdTask">
+            <summary>
+            Логика взаимодействия для ThirdTask.xaml
+            </summary>
+            <summary>
+            ThirdTask
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:_1LabOOP.ThirdTask"/> class.
+            </summary>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event for the button to open another instance of the ThirdTask window.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.Button_Click1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Click event for the button to open the main window.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput_Num(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the PreviewTextInput event for the numerical TextBox.
+            This method restricts user input to digits and commas.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput_t(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+            <summary>
+            Handles the PreviewTextInput event for the precision TextBox.
+            This method restricts user input to digits and commas.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.InputTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event to prevent the space character from being entered in any TextBox.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.NumberBox_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the TextChanged event for the NumberBox.
+            This method calculates and displays the result based on the inputs.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="M:_1LabOOP.ThirdTask.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>
