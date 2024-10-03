@@ -131,7 +131,7 @@ namespace _1LabOOP
         {
             if (a == 0) return 0; // Если число 0, возвращаем 0
             // Приближение
-            int n = (int)Math.Floor(Math.Log2((double)a));
+            int n = (int)Math.Log2((double)a);
             decimal a_ = a / (decimal)Math.Pow(2, 2 * n); // Вычисляем a
             decimal guess = (0.5m + 0.5m * a_) * (decimal)Math.Pow(2, n); // Начальное предположение
             // Основной цикл для вычисления корня
