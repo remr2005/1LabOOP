@@ -19,34 +19,6 @@ namespace _1LabOOP
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /*
-    Неявные преобразования:
-
-    byte    -> short, ushort, int, uint, long, ulong, float, double, decimal 
-    sbyte   -> short, int, long, float, double, decimal 
-    short   -> int, long, float, double, decimal 
-    ushort  -> int, uint, long, ulong, float, double, decimal
-    int     -> long, float, double, decimal
-    uint    -> long, ulong, float, double, decimal
-    long    -> float, double, decimal
-    ulong   -> float, double, decimal
-    float   -> double
-    char    -> ushort, int, uint, long, ulong, float, double, decimal
-
-    Явные преобразования:
-
-    byte   -> short, ushort, int, uint, long, ulong, float, double, decimal 
-    sbyte  -> short, int, long, float, double, decimal 
-    short  -> int, long, float, double, decimal 
-    ushort -> int, uint, long, ulong, float, double, decimal
-    int    -> long, float, double, decimal
-    uint   -> long, ulong, float, double, decimal
-    long   -> float, double, decimal
-    ulong  -> float, double, decimal
-    float  -> double
-    char   -> ushort, int, uint, long, ulong, float, double, decimal
-    */
-
     public partial class MainWindow : Window
     {
         /// <summary>
