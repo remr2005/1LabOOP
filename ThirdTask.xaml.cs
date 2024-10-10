@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,6 +22,8 @@ namespace _1LabOOP
     /// </summary>
     public partial class ThirdTask : Window
     {
+        private int count_it = 0;
+        private decimal guess; 
         /// <summary>
         /// Initializes a new instance of the <see cref="ThirdTask"/> class.
         /// </summary>
@@ -51,16 +54,48 @@ namespace _1LabOOP
             secondWindow.Show();
         }
 
+        // Кнопка для следующей итерации
+        private void Button_Next_Iteration(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(NumberBox.Text)) return;
+            if (string.IsNullOrEmpty(ApproxBox.Text)) this.guess = approximation(decimal.Parse(NumberBox.Text));
+            ApproxBox.Text = this.guess.ToString();
+            decimal it = iteration(this.guess, Decimal.Parse(NumberBox.Text));
+            if (Math.Abs(this.guess - it) > 0.00000000000000000000000000000001m)
+            {
+                this.count_it++;
+                Counnt_iterations_Box.Text = this.count_it.ToString();
+                hange.Text = Math.Abs(this.guess - it).ToString();
+                Result.Text = it.ToString();
+                this.guess = it;
+            }
+        }
+
+        // кнопка для нахождения апроксимации
+        private void Button_generate_approximation(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(NumberBox.Text)) return;
+            this.guess = approximation(decimal.Parse(NumberBox.Text));
+            ApproxBox.Text = this.guess.ToString();
+        
+        }
+        // Если пользователь изменил число
+        private void NumberBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            this.count_it = 0;
+        }
+
         /// <summary>
-        /// Handles the PreviewTextInput event for the numerical TextBox.
-        /// This method restricts user input to digits and commas.
+        /// Handles the PreviewTextInput event for the TxtBox control.
+        /// This method restricts user input to certain characters.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The event data.</param>
-        private void TxtBox_PreviewTextInput_Num(object sender, TextCompositionEventArgs e)
+        private void TxtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            // если пользователь вводит что угодно кроме "0123456789," или
-            // пользователь вводит запятую когда строка пустая или когда уже содержит запятую,
+            // если пользователь вводит что угодно кроме "0123456789-," или
+            // пользователь вводит - и при этом строка не пустая или
+            // пользователь вводит запятую когда строка пустая или когда уже содержит ,
             // отменить ввод
             if (!"0123456789,".Contains(e.Text) || (e.Text == "," && (NumberBox.Text.Length == 0 || NumberBox.Text.Contains(","))))
             {
@@ -69,24 +104,26 @@ namespace _1LabOOP
         }
 
         /// <summary>
-        /// Handles the PreviewTextInput event for the precision TextBox.
-        /// This method restricts user input to digits and commas.
+        /// Handles the PreviewTextInput event for the TxtBox2 control.
+        /// This method restricts user input to certain characters.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The event data.</param>
-        private void TxtBox_PreviewTextInput_t(object sender, TextCompositionEventArgs e)
+        private void TxtBox_PreviewTextInput2(object sender, TextCompositionEventArgs e)
         {
-            // если пользователь вводит что угодно кроме "0123456789," или
-            // пользователь вводит запятую когда строка пустая или когда уже содержит запятую,
+            // если пользователь вводит что угодно кроме "0123456789-," или
+            // пользователь вводит - и при этом строка не пустая или
+            // пользователь вводит запятую когда строка пустая или когда уже содержит ,
             // отменить ввод
-            if (!"0123456789,".Contains(e.Text) || (e.Text == "," && (T_box.Text.Length == 0 || T_box.Text.Contains(","))))
+            if (!"0123456789,".Contains(e.Text) || (e.Text == "," && (ApproxBox.Text.Length == 0 || ApproxBox.Text.Contains(","))))
             {
                 e.Handled = true;
             }
         }
 
         /// <summary>
-        /// Handles the PreviewKeyDown event to prevent the space character from being entered in any TextBox.
+        /// Handles the PreviewKeyDown event for the InputTextBox control.
+        /// This method prevents the user from entering a space character.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The event data.</param>
@@ -100,34 +137,21 @@ namespace _1LabOOP
             }
         }
 
-        /// <summary>
-        /// Handles the TextChanged event for the NumberBox.
-        /// This method calculates and displays the result based on the inputs.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The event data.</param>
-        private void NumberBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Click_Full_Calculate(object sender, RoutedEventArgs e)
         {
-            // Проверяем, заполнены ли поля для ввода
-            if (string.IsNullOrEmpty(T_box.Text) || string.IsNullOrEmpty(NumberBox.Text))
+            if (string.IsNullOrEmpty(NumberBox.Text)) return;
+            if (string.IsNullOrEmpty(ApproxBox.Text)) this.guess = approximation(decimal.Parse(NumberBox.Text));
+            ApproxBox.Text = this.guess.ToString();
+            decimal it = iteration(this.guess, Decimal.Parse(NumberBox.Text));
+            while (Math.Abs(this.guess - it) > 0.00000000000000000000000000000001m)
             {
-                Answer_Label.Content = ""; // Если поля пусты, очищаем ответ
+                this.count_it++;
+                this.guess = it;
+                it = iteration(this.guess, Decimal.Parse(NumberBox.Text));
             }
-            else
-            {
-                try
-                {
-                    // Парсим введенные значения
-                    decimal num = Decimal.Parse(NumberBox.Text);
-                    decimal t = Decimal.Parse(T_box.Text);
-                    // Вычисляем результат и отображаем его
-                    Answer_Label.Content = my_sqrt(num, t).ToString();
-                }
-                catch
-                {
-                    Answer_Label.Content = ""; // Если возникла ошибка, очищаем ответ
-                }
-            }
+            Counnt_iterations_Box.Text = this.count_it.ToString();
+            hange.Text = Math.Abs(this.guess - it).ToString();
+            Result.Text = it.ToString();
         }
     }
 }

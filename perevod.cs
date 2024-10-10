@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 namespace _1LabOOP
 {
@@ -127,19 +128,29 @@ namespace _1LabOOP
         /// <param name="a">Число, из которого нужно извлечь корень.</param>
         /// <param name="t">Точность вычислений.</param>
         /// <returns>Квадратный корень числа.</returns>
-        public static decimal my_sqrt(decimal a, decimal t)
+        public static decimal my_sqrt(decimal a, decimal guess, decimal t=0)
         {
             if (a == 0) return 0; // Если число 0, возвращаем 0
-            // Приближение
-            int n = (int)Math.Log2((double)a);
-            decimal a_ = a / (decimal)Math.Pow(2, 2 * n); // Вычисляем a
-            decimal guess = (0.5m + 0.5m * a_) * (decimal)Math.Pow(2, n); // Начальное предположение
+            int i = 0;
             // Основной цикл для вычисления корня
             while (Math.Abs(((a / guess) + guess) / 2 - guess) > t)
             {
+                i++;
                 guess = ((a / guess) + guess) / 2; // Обновление предположения
             }
             return guess; // Возвращаем результат
+        }
+        
+        // Вычисление приближения
+        public static decimal approximation(decimal i)
+        {
+            int n = (int)Math.Log2((double)i);
+            decimal a = i / (decimal)Math.Pow(2, 2 * n); // Вычисляем a
+            return (0.5m + 0.5m * a) * (decimal)Math.Pow(2, n);
+        }
+        public static decimal iteration(decimal i, decimal a)
+        {
+            return ((a / i) + i) / 2;
         }
     }
 }

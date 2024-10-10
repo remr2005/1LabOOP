@@ -9,11 +9,18 @@
     <Grid>
         <Button Content="Следующее задание&#xA;" HorizontalAlignment="Left" Margin="650,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click1"/>
         <Button Content="Предыдущее задание" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top" Height="25" Width="125" Click="Button_Click"/>
-        <TextBlock TextWrapping="Wrap" Margin="43,31,529,383"><Run Language="ru-ru" Text="Число"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="435,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="146"><Run Language="ru-ru" Text="Точность"/></TextBlock>
-        <TextBox Name="NumberBox" PreviewTextInput="TxtBox_PreviewTextInput_Num"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="NumberBox_TextChanged" HorizontalAlignment="Left" Margin="43,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="377" Height="17"/>
-        <TextBox Name="T_box"  PreviewTextInput="TxtBox_PreviewTextInput_t"  PreviewKeyDown="InputTextBox_PreviewKeyDown" TextChanged="NumberBox_TextChanged" HorizontalAlignment="Left" Margin="435,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" Height="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="43,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" Width="107"><Run Language="ru-ru" Text="ОТВЕТ"/></TextBlock>
-        <Label Name="Answer_Label"  Content="" HorizontalAlignment="Left" Margin="43,178,0,0" VerticalAlignment="Top" Height="26" Width="202"/>
+        <TextBlock TextWrapping="Wrap" Margin="43,31,615,383"><Run Language="ru-ru" Text="Число"/></TextBlock>
+        <TextBox Name="NumberBox" TextChanged="NumberBox_TextChanged" PreviewTextInput="TxtBox_PreviewTextInput"  PreviewKeyDown="InputTextBox_PreviewKeyDown" HorizontalAlignment="Left" Margin="203,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Height="17"/>
+        <Label Content="Приближение" HorizontalAlignment="Left" Height="30" Margin="37,66,0,0" VerticalAlignment="Top" Width="157"/>
+        <TextBox Name="ApproxBox"  PreviewTextInput="TxtBox_PreviewTextInput2"  PreviewKeyDown="InputTextBox_PreviewKeyDown" HorizontalAlignment="Left" Height="15" Margin="205,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Изменение" HorizontalAlignment="Left" Height="25" Margin="37,119,0,0" VerticalAlignment="Top" Width="148"/>
+        <Label Content="Результат" HorizontalAlignment="Left" Height="30" Margin="37,159,0,0" VerticalAlignment="Top" Width="168"/>
+        <Button Click="Button_generate_approximation" Content="Сгенерировать приближение" HorizontalAlignment="Left" Height="22" Margin="470,70,0,0" VerticalAlignment="Top" Width="205"/>
+        <TextBlock Name="hange" HorizontalAlignment="Left" Height="25" Margin="205,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <TextBlock Name="Result" HorizontalAlignment="Left" Margin="203,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="217"/>
+        <Button Click="Button_Next_Iteration" Content="Следующая итерация" HorizontalAlignment="Left" Margin="470,31,0,0" VerticalAlignment="Top" Width="205" Height="19"/>
+        <Label Content="Кол-во итераций" HorizontalAlignment="Left" Height="37" Margin="37,217,0,0" VerticalAlignment="Top" Width="113"/>
+        <TextBlock Name="Counnt_iterations_Box" HorizontalAlignment="Left" Margin="203,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+        <Button Click="Button_Click_Full_Calculate" Content="Вычислить сразу" HorizontalAlignment="Left" Margin="470,132,0,0" VerticalAlignment="Top" Height="22" Width="205"/>
     </Grid>
 </Window>

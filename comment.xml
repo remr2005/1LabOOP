@@ -86,7 +86,7 @@
             <param name="b">Основание системы счисления.</param>
             <returns>Число в виде строки в новой системе счисления.</returns>
         </member>
-        <member name="M:_1LabOOP.perevod.my_sqrt(System.Decimal,System.Decimal)">
+        <member name="M:_1LabOOP.perevod.my_sqrt(System.Decimal,System.Decimal,System.Decimal)">
             <summary>
             Вычисляет квадратный корень с заданной точностью.
             </summary>
@@ -208,33 +208,26 @@
             <param name="sender">The source of the event.</param>
             <param name="e">The event data.</param>
         </member>
-        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput_Num(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput(System.Object,System.Windows.Input.TextCompositionEventArgs)">
             <summary>
-            Handles the PreviewTextInput event for the numerical TextBox.
-            This method restricts user input to digits and commas.
+            Handles the PreviewTextInput event for the TxtBox control.
+            This method restricts user input to certain characters.
             </summary>
             <param name="sender">The source of the event.</param>
             <param name="e">The event data.</param>
         </member>
-        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput_t(System.Object,System.Windows.Input.TextCompositionEventArgs)">
+        <member name="M:_1LabOOP.ThirdTask.TxtBox_PreviewTextInput2(System.Object,System.Windows.Input.TextCompositionEventArgs)">
             <summary>
-            Handles the PreviewTextInput event for the precision TextBox.
-            This method restricts user input to digits and commas.
+            Handles the PreviewTextInput event for the TxtBox2 control.
+            This method restricts user input to certain characters.
             </summary>
             <param name="sender">The source of the event.</param>
             <param name="e">The event data.</param>
         </member>
         <member name="M:_1LabOOP.ThirdTask.InputTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
             <summary>
-            Handles the PreviewKeyDown event to prevent the space character from being entered in any TextBox.
-            </summary>
-            <param name="sender">The source of the event.</param>
-            <param name="e">The event data.</param>
-        </member>
-        <member name="M:_1LabOOP.ThirdTask.NumberBox_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
-            <summary>
-            Handles the TextChanged event for the NumberBox.
-            This method calculates and displays the result based on the inputs.
+            Handles the PreviewKeyDown event for the InputTextBox control.
+            This method prevents the user from entering a space character.
             </summary>
             <param name="sender">The source of the event.</param>
             <param name="e">The event data.</param>
