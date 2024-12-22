@@ -58,8 +58,12 @@ namespace _1LabOOP
         private void Button_Next_Iteration(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(NumberBox.Text)) return;
-            if (string.IsNullOrEmpty(ApproxBox.Text)) this.guess = approximation(decimal.Parse(NumberBox.Text));
-            ApproxBox.Text = this.guess.ToString();
+            if (string.IsNullOrEmpty(ApproxBox.Text))
+            {
+                this.guess = approximation(decimal.Parse(NumberBox.Text));
+                ApproxBox.Text = this.guess.ToString();
+            }
+            this.guess = decimal.Parse(ApproxBox.Text);
             decimal it = iteration(this.guess, Decimal.Parse(NumberBox.Text));
             if (Math.Abs(this.guess - it) > 0.00000000000000000000000000000001m)
             {
@@ -68,6 +72,7 @@ namespace _1LabOOP
                 hange.Text = Math.Abs(this.guess - it).ToString();
                 Result.Text = it.ToString();
                 this.guess = it;
+                ApproxBox.Text = it.ToString();
             }
         }
 

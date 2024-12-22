@@ -10,4 +10,28 @@
     <DocumentationFile>./comment.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="ConsoleApp1\.vs\ProjectSettings.json" />
+    <Content Include="ConsoleApp1\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ConsoleApp1\.vs\ConsoleApp1\DesignTimeBuild\.dtbcache.v2" />
+    <None Include="ConsoleApp1\.vs\ConsoleApp1\FileContentIndex\53369d6d-0b49-42a7-97e1-8117c2638036.vsidx" />
+    <None Include="ConsoleApp1\.vs\ConsoleApp1\FileContentIndex\b24a0a9d-2bef-4b5d-ac85-cf667b3a1bb3.vsidx" />
+    <None Include="ConsoleApp1\.vs\ConsoleApp1\FileContentIndex\de2b8eb4-ad33-4166-936f-26aec50769b2.vsidx" />
+    <None Include="ConsoleApp1\.vs\ConsoleApp1\v17\.futdcache.v2" />
+    <None Include="ConsoleApp1\.vs\ProjectEvaluation\consoleapp1.metadata.v7.bin" />
+    <None Include="ConsoleApp1\.vs\ProjectEvaluation\consoleapp1.projects.v7.bin" />
+    <None Include="ConsoleApp1\.vs\slnx.sqlite" />
+    <None Include="ConsoleApp1\ConsoleApp1.csproj" />
+    <None Include="ConsoleApp1\ConsoleApp1.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ConsoleApp1\bin\Release\net6.0\" />
+    <Folder Include="ConsoleApp1\obj\Release\net6.0\refint\" />
+    <Folder Include="ConsoleApp1\obj\Release\net6.0\ref\" />
+  </ItemGroup>
+
 </Project>
